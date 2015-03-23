@@ -2,11 +2,11 @@
 loclahost ansible_connection=local
 
 [app]
-localhost:22221
-localhost:22222
+app1:22221
+app2:22222
 
 [db]
-localhost:22223
+db:22223
 
 [multi:children]
 app
