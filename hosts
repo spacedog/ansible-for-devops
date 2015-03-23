@@ -1,2 +1,3 @@
-[test]
-localhost:22221
+[host]
+loclahost ansible_connection=local
+

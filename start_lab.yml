@@ -1,0 +1,17 @@
+---
+
+- hosts: host
+
+  tasks:
+    - name: Start Lab's containers
+      docker:
+        image=abaranov/ssh
+        name={{item.name}}
+        hostname={{item.name}}
+        ports="{{item.port}}:22"
+        detach=yes
+        state=running
+      with_items:
+        - {name: app1, port: 22221}
+        - {name: app2, port: 22222}
+        - {name: db,   port: 22223}
