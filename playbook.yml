@@ -1,10 +1,11 @@
 ---
 
 - hosts: all
+  user: root
 
   vars:
     node_app_location: /opt/node
-  
+
   tasks:
     - name: Import EPEL and REMI GPG keys.
       rpm_key:
