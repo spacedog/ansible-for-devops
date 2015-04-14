@@ -1,0 +1,7 @@
+---
+- name: Various debugs
+  hosts: all
+  user: root
+  
+  tasks:
+    - debug: var=ansible_eth0.ipv4.address
